@@ -2,7 +2,7 @@
 
 📚 Trilha da plataforma Alura focada em escrever código Python limpo, escalável e profissional.
 
-* 🔗 Trilha na Alura: *https://cursos.alura.com.br/formacao-boas-praticas-python*
+* 🔗 Trilha na Alura: *https://www.alura.com.br/formacao-boas-praticas-python*
 
 ---
 
@@ -38,10 +38,10 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 ### 1️⃣ PEP8 e boas práticas de código
 
 📁 Pasta no repositório:
-👉 `./Python com PEP8/`
+👉 [Python com PEP8](./Python%20com%20PEP8/)
 
 🔗 Curso na Alura:
-👉 *https://cursos.alura.com.br/course/python-aplicando-boas-praticas-pep-8*
+👉 *https://www.alura.com.br/curso-online-python-aplicando-boas-praticas-pep-8*
 
 📌 Conteúdo:
 
@@ -59,7 +59,7 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 👉 `./Python com SOLID e Design Patterns/`
 
 🔗 Curso na Alura:
-👉 *https://cursos.alura.com.br/course/python-construindo-sistemas-eficientes-solid-design-patterns*
+👉 *https://www.alura.com.br/curso-online-python-construindo-sistemas-eficientes-solid-design-patterns*
 
 📌 Conteúdo:
 
@@ -76,7 +76,7 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 👉 `./Python e TDD - Explorando Testes Unitarios/`
 
 🔗 Curso na Alura:
-👉 *https://cursos.alura.com.br/course/python-tdd-explorando-testes-unitarios*
+👉 *https://www.alura.com.br/curso-online-python-tdd-explorando-testes-unitarios*
 
 📌 Conteúdo:
 
@@ -84,15 +84,5 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 * Test-Driven Development (TDD)
 * Cobertura de testes
 * Testes com exceptions e markers
-
----
-
-## 📌 Observações
-
-Este repositório contém:
-
-* Anotações das aulas
-* Exercícios
-* Projetos desenvolvidos durante os cursos
 
 ---
