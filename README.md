@@ -56,7 +56,7 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 ### 2️⃣ SOLID e Design Patterns
 
 📁 Pasta no repositório:
-👉 `./Python com SOLID e Design Patterns/`
+👉 [Python com SOLID e Design Patterns](./Python%20com%20SOLID%20e%20Design%20Patterns/)
 
 🔗 Curso na Alura:
 👉 *https://www.alura.com.br/curso-online-python-construindo-sistemas-eficientes-solid-design-patterns*
@@ -73,7 +73,7 @@ O foco é transformar código simples em soluções **robustas, escaláveis e f�
 ### 3️⃣ Testes unitários com Pytest (TDD)
 
 📁 Pasta no repositório:
-👉 `./Python e TDD - Explorando Testes Unitarios/`
+👉 [Python e TDD - Explorando Testes Unitarios](./Python%20e%20TDD%20-%20Explorando%20Testes%20Unitarios/)
 
 🔗 Curso na Alura:
 👉 *https://www.alura.com.br/curso-online-python-tdd-explorando-testes-unitarios*
