@@ -1,73 +1,123 @@
-# Aula 3 - Test-Driven Development
+# Test-Driven Development (TDD)
 
-## Transcrição
+## Conceito de TDD
 
-Na última aula, aprendemos a utilizar o Pytest para criar testes automatizados e exploramos metodologias como Given-When-Then. Agora, vamos aprofundar um conceito muito importante no mundo de testes: o Test-Driven Development (TDD).
+* **TDD (Test-Driven Development)** = desenvolvimento guiado por testes.
+* Ideia principal:
 
-Inicialmente, seguimos o fluxo tradicional: primeiro implementamos uma funcionalidade (como o método sobrenome) e depois criamos testes para validá-la. Porém, o TDD propõe exatamente o contrário — primeiro criamos os testes, depois implementamos o código.
+  * Criar **testes antes do código**.
+* Fluxo diferente do comum:
 
-O TDD (Desenvolvimento Guiado por Testes) funciona em um ciclo contínuo composto por três etapas:
+  * Tradicional: código → teste
+  * TDD: teste → código → melhoria
 
-1. Testes: criamos testes baseados nas regras de negócio.
-2. Código: implementamos o mínimo necessário para fazer os testes passarem.
-3. Refatoração: melhoramos o código mantendo os testes passando.
+## Ciclo do TDD
 
-Esse ciclo se repete constantemente ao longo do desenvolvimento.
+* O processo segue um ciclo contínuo:
 
-A principal vantagem dessa abordagem é que os testes se tornam a base do projeto, garantindo que o código sempre respeite as regras de negócio. Além disso, o TDD aumenta a segurança ao modificar códigos existentes e melhora a colaboração entre desenvolvedores.
+  1. **Testes**
+  2. **Código**
+  3. **Refatoração**
+
+### Funcionamento
+
+* Criar teste baseado na regra de negócio.
+* Executar:
+
+  * Teste **falha** (código ainda não existe).
+* Implementar código mínimo:
+
+  * Objetivo: fazer o teste passar.
+* Refatorar:
+
+  * Melhorar legibilidade e estrutura.
+* Repetir o ciclo.
+
+## Vantagens do TDD
+
+* Testes refletem diretamente as **regras de negócio**.
+* Código mais seguro para alterações.
+* Facilita trabalho em equipe.
+* Base sólida para evolução do sistema.
+
+## Aplicação Prática
+
+### Nova funcionalidade
+
+* Regra:
+
+  * Funcionários com salário ≥ 100000
+  * E que sejam diretores/sócios
+  * Devem ter **redução de 10% no salário**
 
 ---
 
-## Aplicando TDD na prática
+## Criação do Teste
 
-Uma nova funcionalidade foi solicitada: aplicar um decréscimo de 10% no salário de diretores, que possuem salários a partir de R$100.000,00.
+* Nome do teste deve:
 
-### 1. Criando o teste (primeiro passo do TDD)
+  * Começar com `test_`
+  * Ser **descritivo (verboso)**
 
 ```python
 def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
-    entrada_salario = 100000  # Given
+    entrada_salario = 100000  # given
     entrada_nome = 'Paulo Bragança'
     esperado = 90000
 
     funcionario_teste = Funcionario(entrada_nome, '11/11/2000', entrada_salario)
-    funcionario_teste.decrescimo_salario()  # When
+
+    funcionario_teste.decrescimo_salario()  # when
     resultado = funcionario_teste.salario
 
-    assert resultado == esperado  # Then
-````
+    assert resultado == esperado  # then
+```
 
-Ao executar esse teste, ele falhará — pois ainda não existe a implementação.
+* Etapas:
+
+  * **Given**: dados de entrada
+  * **When**: ação executada
+  * **Then**: verificação do resultado
 
 ---
 
-### 2. Implementando o código
+## Implementação do Código
 
 ```python
 def decrescimo_salario(self):
     sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
+    
     if self._salario >= 100000 and (self.sobrenome() in sobrenomes):
         decrescimo = self._salario * 0.1
         self._salario = self._salario - decrescimo
 ```
 
-Após implementar, executamos os testes novamente — agora eles passam.
+* Lógica:
+
+  * Verifica salário mínimo
+  * Verifica se é diretor/sócio
+  * Aplica desconto de 10%
 
 ---
 
-### 3. Refatoração
+## Refatoração
 
-O método criado realiza múltiplas responsabilidades: verificar se é sócio e aplicar o desconto. Para melhorar isso, podemos separar essas responsabilidades.
+### Problema
 
-#### Criando método auxiliar:
+* Método com múltiplas responsabilidades:
+
+  * Verifica tipo de funcionário
+  * Aplica desconto
+
+### Solução
+
+* Separar responsabilidades
 
 ```python
 def _eh_socio(self):
     sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
     return (self._salario >= 100000) and (self.sobrenome() in sobrenomes)
 ```
-
-#### Atualizando método principal:
 
 ```python
 def decrescimo_salario(self):
@@ -76,6 +126,10 @@ def decrescimo_salario(self):
         self._salario = self._salario - decrescimo
 ```
 
-Após a refatoração, rodamos os testes novamente e verificamos que tudo continua funcionando corretamente.
+### Melhorias
+
+* Código mais organizado
+* Cada método com **uma única responsabilidade**
+* Mais legível e “pythônico”
 
 ---
