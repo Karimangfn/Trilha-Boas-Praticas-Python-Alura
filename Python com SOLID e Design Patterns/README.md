@@ -24,10 +24,6 @@ Ao longo das aulas, são trabalhados conceitos que ajudam a reduzir acoplamento,
 
 👉 [Projeto](./Projeto/)
 
-### 📂 Resources
-
-👉 [Resources](./Resources/)
-
 ---
 
 ## 🚀 Conteúdos abordados
