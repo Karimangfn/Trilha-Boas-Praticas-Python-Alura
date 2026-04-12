@@ -10,9 +10,7 @@
 
 Este curso tem como objetivo ensinar como escrever código Python de forma **limpa, organizada e seguindo padrões profissionais**.
 
-Ao longo das aulas, são abordadas práticas fundamentais para melhorar a qualidade do código, como padronização, organização de arquivos, nomenclatura e tratamento de erros.
-
-Além disso, o curso introduz **testes automatizados com Pytest**, garantindo maior confiabilidade e manutenção do código.
+Ao longo das aulas, são abordadas práticas fundamentais para melhorar a qualidade do código, como padronização, organização de arquivos, nomenclatura, tratamento de erros e **testes automatizados com Pytest**.
 
 ---
 
