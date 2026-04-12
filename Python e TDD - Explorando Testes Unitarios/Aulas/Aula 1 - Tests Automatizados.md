@@ -1,7 +1,3 @@
-Aqui está o `.md` seguindo exatamente o padrão que você usou 👇
-
----
-
 # Testes Automatizados
 
 ## Introdução ao Curso
