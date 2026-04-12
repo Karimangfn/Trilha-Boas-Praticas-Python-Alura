@@ -141,5 +141,3 @@ def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
 * Separar testes do código principal
 * Manter estrutura padrão do Pytest
 * Utilizar metodologias como Given-When-Then ou AAA
-
-```
