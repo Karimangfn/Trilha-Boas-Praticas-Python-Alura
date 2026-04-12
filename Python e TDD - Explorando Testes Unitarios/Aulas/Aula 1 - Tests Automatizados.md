@@ -167,13 +167,4 @@ funcionario_teste2 = Funcionario('Teste', '01/12/1999', 1111)
 
   * Uso de frameworks como **Pytest**
 
-## Próximos Passos
-
-* Aprender sobre:
-
-  * Pytest
-  * Organização de testes
-  * TDD
-* Evoluir testes para algo mais escalável e profissional
-
 ---
